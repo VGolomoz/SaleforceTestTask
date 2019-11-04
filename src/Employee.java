@@ -1,10 +1,31 @@
 public abstract class Employee {
 
-    Double ratePerHour;
-    Integer workdays;
+    private Double ratePerHour;
+    private Integer workdays;
+
+    public Employee(Double ratePerHour, Integer workdays) {
+        this.ratePerHour = ratePerHour;
+        this.workdays = workdays;
+    }
+
+    public Double getRatePerHour() {
+        return ratePerHour;
+    }
+
+    public void setRatePerHour(Double ratePerHour) {
+        this.ratePerHour = ratePerHour;
+    }
+
+    public Integer getWorkdays() {
+        return workdays;
+    }
+
+    public void setWorkdays(Integer workdays) {
+        this.workdays = workdays;
+    }
 
     Double getSalary(){
-        double salary = ratePerHour * workdays * 8;
+        Double salary = ratePerHour * workdays * 8;
         return salary;
     }
 }
